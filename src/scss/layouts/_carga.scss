@@ -1,0 +1,30 @@
+@use "base/variables" as var;
+@use "base/mixins" as mix;
+
+.main-content {
+    label{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    max-width: 50%;
+    margin: 5rem auto;
+
+    .form-carga {
+        display: flex;
+        flex-direction: column;
+    }
+    .input{
+        margin: 2rem 0;
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid var.$primario;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .unidad-option{
+        background-color: var.$azul;
+    }
+
+    
+}

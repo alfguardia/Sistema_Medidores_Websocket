@@ -1,0 +1,46 @@
+@use "base/variables" as var;
+@use "base/mixins" as mix;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var.$fuentePrincipal;
+    font-size: 1.6rem;
+    background: linear-gradient(to right, #ffffff, #cacaca);
+}
+
+img {
+    width: 30rem;
+    height: auto;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.btn-registrar {
+    width: auto;
+    padding: 2rem;
+    border: none;
+    background-color: var.$azul;
+    color: var.$blanco;
+    font-weight: bold;
+    align-self: center;
+    @include mix.tablet {
+        width: 20rem;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: var.$azulSecundario;
+        transition: all 0.8s ease-in;
+    }
+}

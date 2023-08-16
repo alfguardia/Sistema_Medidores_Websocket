@@ -1,0 +1,16 @@
+@use 'variables' as var;
+
+@mixin href($color, $fontSize, $fontWeight) {
+    color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+@mixin tablet{
+    @media (min-width: 768px){
+        @content;
+    }
+}

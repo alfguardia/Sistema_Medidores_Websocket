@@ -1,0 +1,45 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.surtidores {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    margin-top: 5rem;
+
+    .grid-bottom {
+        gap: 5rem;
+        display: flex;
+    }
+
+    .grid-top {
+        gap: 5rem;
+        display: flex;
+    }
+
+    .surtidor-card {
+        .surtidor > * {
+            margin-bottom: 2rem;
+        }
+        .surtidor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: 50px;
+                width: 50px;
+            }
+
+            label {
+                font-weight: bold;
+            }
+            input {
+                padding: 0.5rem;
+                background: none;
+                border: none;
+                border-bottom: 2px solid v.$azul;
+            }
+        }
+    }
+}

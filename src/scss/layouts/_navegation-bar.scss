@@ -1,0 +1,23 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+
+.navegation{
+    background-color: var.$negro;
+}
+
+.navegation-bar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navegation-btn{
+    padding: 2rem;
+    @include mix.href(var.$blanco,2rem,700);
+    
+    &:hover{
+        transition: .6s ease-in-out;
+        background-color: var.$blanco;
+        color: var.$negro;
+    }
+}
