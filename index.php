@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="build/css/app.css">
-    <title>Sistema de Surtidores - AMYM</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -19,24 +19,23 @@
                 <div class="surtidor-card">
                     <div class="surtidor">
                         <h3>Surtidor Hidraulico</h3>
-                        <img id="ledHidraulico" class="led" data-ip="235" src="src/img/led-off.png">
+                        <img id="ledHidraulico" class="led" data-ip="30" src="src/img/led-off.png">
                         <label for="input1">Unidad</label>
                         <input type="text" id="input1" name="input1" required />
-                        <button class="" onclick="encenderLED('input1','235')"><img
-                                src="src/img/on-button.png"></button>
-                        <button class="" onclick="apagarLED('235')"><img src="src/img/off-button.png"></button>
+                        <button class="" onclick="encenderLED('input1','30')"><img src="src/img/on-button.png"></button>
+                        <button class="" onclick="apagarLED('30')"><img src="src/img/off-button.png"></button>
                     </div>
                 </div>
 
                 <div class="surtidor-card">
                     <div class="surtidor">
                         <h3>Surtidor ATF</h3>
-                        <img id="ledAtf" class="led" data-ip="237" src="src/img/led-off.png">
+                        <img id="ledAtf" class="led" data-ip="221" src="src/img/led-off.png">
                         <label for="input2">Unidad</label>
                         <input type="text" id="input2" name="input2" required />
-                        <button class="" onclick="encenderLED('input2','237')"><img
+                        <button class="" onclick="encenderLED('input2','221')"><img
                                 src="src/img/on-button.png"></button>
-                        <button class="" onclick="apagarLED('237')"><img src="src/img/off-button.png"></button>
+                        <button class="" onclick="apagarLED('221')"><img src="src/img/off-button.png"></button>
 
                     </div>
                 </div>
@@ -80,6 +79,17 @@
                                 src="src/img/on-button.png"></button>
                         <button class="" onclick="apagarLED('226')"><img src="src/img/off-button.png"></button>
 
+                    </div>
+                </div>
+
+                <div class="surtidor-card">
+                    <div class="surtidor">
+                        <h3>Surtidor Urea</h3>
+                        <img id="ledUrea" class="led" data-ip="96" src="src/img/led-off.png">
+                        <label for="input6">Unidad</label>
+                        <input type="text" id="input6" name="input6" required />
+                        <button class="" onclick="encenderLED('input6','96')"><img src="src/img/on-button.png"></button>
+                        <button class="" onclick="apagarLED('96')"><img src="src/img/off-button.png"></button>
                     </div>
                 </div>
             </div>

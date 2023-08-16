@@ -8,16 +8,19 @@ const maxIntentosReconexion = 5;
 
 const connectWebSocket = () => {
     ipSurtidores.forEach(ip => {
+
         let socket = new WebSocket(`ws://192.168.0.${ip}/ws`);
 
         socket.onopen = function (event) {
-            console.log(`Conexion establecida...${ip}`);
+            const respuesta = diccionarioIp(ip);
+            console.log(`Conexion establecida : ${respuesta}`);
             sockets.push(socket);
             intentosReconexion = 0;
         };
 
         socket.onclose = function (event) {
-            console.log(`Conexion fallida...Intentando reconectar...${ip}`);
+            const respuesta = diccionarioIp(ip);
+            console.log(`Conexion perdida : ${respuesta}`);
             console.log(`Intentos de reconexion: ${intentosReconexion}`);
 
             if (maxIntentosReconexion < intentosReconexion) {
@@ -29,7 +32,8 @@ const connectWebSocket = () => {
         }
 
         socket.onerror = function (event) {
-            console.log(`Conexion fallida...Surtidor : ${ip}`);
+            const respuesta = diccionarioIp(ip);
+            console.log(`Conexion fallida : ${respuesta}`);
         }
 
         socket.onmessage = function (event) {
@@ -102,6 +106,23 @@ function mostrarMensaje(texto, status) {
         showConfirmButton: false,
         timer: 2500,
     });
+}
+
+function diccionarioIp(ip) {
+    const direcciones = {
+        "30": "Hidraulico",
+        "221": "ATF",
+        "224": "Caja",
+        "225": "Diferencial",
+        "226": "Motor",
+        "96": "Urea"
+    }
+
+    if (ip in direcciones) {
+        return `Surtidor ${direcciones[ip]}`;
+    }
+
+
 }
 
 // Iniciar Conexión WebSocket
