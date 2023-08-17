@@ -4,6 +4,9 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    @include mix.tablet {
+        width: 100%;
+    }
 }
 
 *,
@@ -16,6 +19,7 @@ body {
     font-family: var.$fuentePrincipal;
     font-size: 1.6rem;
     background: linear-gradient(to right, #ffffff, #cacaca);
+    background-attachment: fixed;
 }
 
 img {
